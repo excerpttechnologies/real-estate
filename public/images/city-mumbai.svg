@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1067" viewBox="0 0 800 1067">
+  <defs>
+    <linearGradient id="mumbai-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b"/>
+      <stop offset="30%" style="stop-color:#581c87"/>
+      <stop offset="60%" style="stop-color:#f97316"/>
+      <stop offset="80%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#fef3c7"/>
+    </linearGradient>
+    <linearGradient id="mumbai-sea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#0c4a6e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="1067" fill="url(#mumbai-sky)"/>
+  
+  <!-- Sun -->
+  <circle cx="400" cy="500" r="60" fill="#fbbf24" opacity="0.9"/>
+  <circle cx="400" cy="500" r="80" fill="#fbbf24" opacity="0.3"/>
+  
+  <!-- Sea -->
+  <rect x="0" y="600" width="800" height="467" fill="url(#mumbai-sea)"/>
+  
+  <!-- Sun reflection on water -->
+  <ellipse cx="400" cy="650" rx="120" ry="20" fill="#fbbf24" opacity="0.3"/>
+  <ellipse cx="400" cy="700" rx="80" ry="10" fill="#fbbf24" opacity="0.2"/>
+  
+  <!-- Marine Drive curve -->
+  <path d="M50,580 Q200,620 350,590 Q500,560 650,600 Q750,630 800,610" fill="none" stroke="#fbbf24" stroke-width="3" opacity="0.6"/>
+  <path d="M50,590 Q200,630 350,600 Q500,570 650,610 Q750,640 800,620" fill="none" stroke="#fbbf24" stroke-width="2" opacity="0.4"/>
+  
+  <!-- Mumbai skyline -->
+  <rect x="60" y="350" width="40" height="250" fill="#1f2937" opacity="0.8"/>
+  <rect x="120" y="300" width="50" height="300" fill="#374151" opacity="0.8"/>
+  <rect x="190" y="280" width="45" height="320" fill="#1f2937" opacity="0.8"/>
+  <rect x="260" y="250" width="60" height="350" fill="#374151" opacity="0.9"/>
+  <rect x="340" y="320" width="40" height="280" fill="#1f2937" opacity="0.8"/>
+  <rect x="400" y="200" width="55" height="400" fill="#4b5563" opacity="0.9"/>
+  <rect x="480" y="270" width="50" height="330" fill="#1f2937" opacity="0.8"/>
+  <rect x="550" y="310" width="45" height="290" fill="#374151" opacity="0.8"/>
+  <rect x="620" y="340" width="55" height="260" fill="#1f2937" opacity="0.8"/>
+  <rect x="700" y="380" width="40" height="220" fill="#374151" opacity="0.8"/>
+  
+  <!-- Window lights -->
+  <rect x="70" y="370" width="6" height="4" fill="#fbbf24" opacity="0.8"/>
+  <rect x="85" y="400" width="6" height="4" fill="#fbbf24" opacity="0.6"/>
+  <rect x="135" y="320" width="6" height="4" fill="#fbbf24" opacity="0.7"/>
+  <rect x="150" y="380" width="6" height="4" fill="#fbbf24" opacity="0.8"/>
+  <rect x="275" y="270" width="8" height="6" fill="#fbbf24" opacity="0.9"/>
+  <rect x="295" y="320" width="8" height="6" fill="#fbbf24" opacity="0.7"/>
+  <rect x="275" y="400" width="8" height="6" fill="#fbbf24" opacity="0.6"/>
+  <rect x="415" y="220" width="8" height="6" fill="#fbbf24" opacity="0.8"/>
+  <rect x="430" y="280" width="8" height="6" fill="#fbbf24" opacity="0.7"/>
+  <rect x="415" y="360" width="8" height="6" fill="#fbbf24" opacity="0.9"/>
+  <rect x="495" y="290" width="6" height="4" fill="#fbbf24" opacity="0.6"/>
+  <rect x="510" y="350" width="6" height="4" fill="#fbbf24" opacity="0.8"/>
+  
+  <!-- Text -->
+  <text x="400" y="900" font-family="system-ui,sans-serif" font-size="48" font-weight="700" fill="white" text-anchor="middle" opacity="0.9">MUMBAI</text>
+  <text x="400" y="950" font-family="system-ui,sans-serif" font-size="20" fill="white" text-anchor="middle" opacity="0.6">12,450+ Properties</text>
+</svg>

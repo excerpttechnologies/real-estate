@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { builders } from "@/lib/data"
 import { Star, ArrowRight } from "lucide-react"
@@ -29,10 +30,19 @@ export function BuildersSection() {
           <Link
             key={builder.id}
             href="/properties"
-            className="flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center shadow-sm transition-all hover:shadow-md"
+            className="group flex flex-col items-center rounded-2xl border border-border bg-card p-6 text-center shadow-sm transition-all hover:shadow-md hover:border-primary/20"
           >
-            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-primary/10 text-xl font-bold text-primary">
-              {builder.logo}
+            <div className="relative flex h-14 w-14 items-center justify-center rounded-xl bg-primary/5 text-xl font-bold text-primary overflow-hidden border border-border">
+              {builder.logo.startsWith("http") ? (
+                <Image
+                  src={builder.logo}
+                  alt={builder.name}
+                  fill
+                  className="object-cover group-hover:scale-110 transition-transform"
+                />
+              ) : (
+                builder.logo
+              )}
             </div>
             <h3 className="mt-3 text-sm font-semibold text-foreground">
               {builder.name}

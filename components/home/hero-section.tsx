@@ -31,8 +31,8 @@ export function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-bg.jpg"
-          alt="Modern buildings"
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80"
+          alt="Modern luxury architecture"
           fill
           className="object-cover"
           priority
@@ -91,11 +91,10 @@ export function HeroSection() {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`flex-1 rounded-lg px-4 py-2.5 text-sm font-medium capitalize transition-all ${
-                    activeTab === tab
-                      ? "bg-primary text-primary-foreground shadow-sm"
-                      : "text-muted-foreground hover:text-foreground"
-                  }`}
+                  className={`flex-1 rounded-lg px-4 py-2.5 text-sm font-medium capitalize transition-all ${activeTab === tab
+                    ? "bg-primary text-primary-foreground shadow-sm"
+                    : "text-muted-foreground hover:text-foreground"
+                    }`}
                 >
                   {tab}
                 </button>

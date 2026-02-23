@@ -22,6 +22,7 @@ interface FilterState {
   status: string
   postedBy: string
   verified: boolean
+  featured: boolean
 }
 
 interface FilterSidebarProps {
@@ -51,6 +52,7 @@ export function FilterSidebar({ filters, onFilterChange }: FilterSidebarProps) {
               status: "all",
               postedBy: "all",
               verified: false,
+              featured: false,
             })
           }
         >
@@ -69,11 +71,10 @@ export function FilterSidebar({ filters, onFilterChange }: FilterSidebarProps) {
             <button
               key={type}
               onClick={() => update({ listingType: type })}
-              className={`rounded-lg px-3 py-1.5 text-xs font-medium capitalize transition-colors ${
-                filters.listingType === type
+              className={`rounded-lg px-3 py-1.5 text-xs font-medium capitalize transition-colors ${filters.listingType === type
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
+                }`}
             >
               {type}
             </button>
@@ -89,11 +90,10 @@ export function FilterSidebar({ filters, onFilterChange }: FilterSidebarProps) {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => update({ propertyType: "all" })}
-            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-              filters.propertyType === "all"
+            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${filters.propertyType === "all"
                 ? "bg-primary text-primary-foreground"
                 : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-            }`}
+              }`}
           >
             All
           </button>
@@ -101,11 +101,10 @@ export function FilterSidebar({ filters, onFilterChange }: FilterSidebarProps) {
             <button
               key={type}
               onClick={() => update({ propertyType: type })}
-              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-                filters.propertyType === type
+              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${filters.propertyType === type
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
+                }`}
             >
               {type}
             </button>
@@ -143,11 +142,10 @@ export function FilterSidebar({ filters, onFilterChange }: FilterSidebarProps) {
             <button
               key={bed}
               onClick={() => update({ bedrooms: bed })}
-              className={`flex-1 rounded-lg py-1.5 text-xs font-medium capitalize transition-colors ${
-                filters.bedrooms === bed
+              className={`flex-1 rounded-lg py-1.5 text-xs font-medium capitalize transition-colors ${filters.bedrooms === bed
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
+                }`}
             >
               {bed === "any" ? "Any" : `${bed}`}
             </button>
@@ -163,11 +161,10 @@ export function FilterSidebar({ filters, onFilterChange }: FilterSidebarProps) {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => update({ furnishing: "all" })}
-            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-              filters.furnishing === "all"
+            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${filters.furnishing === "all"
                 ? "bg-primary text-primary-foreground"
                 : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-            }`}
+              }`}
           >
             All
           </button>
@@ -175,11 +172,10 @@ export function FilterSidebar({ filters, onFilterChange }: FilterSidebarProps) {
             <button
               key={type}
               onClick={() => update({ furnishing: type })}
-              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-                filters.furnishing === type
+              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${filters.furnishing === type
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
+                }`}
             >
               {type}
             </button>
@@ -195,11 +191,10 @@ export function FilterSidebar({ filters, onFilterChange }: FilterSidebarProps) {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => update({ status: "all" })}
-            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-              filters.status === "all"
+            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${filters.status === "all"
                 ? "bg-primary text-primary-foreground"
                 : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-            }`}
+              }`}
           >
             All
           </button>
@@ -207,11 +202,10 @@ export function FilterSidebar({ filters, onFilterChange }: FilterSidebarProps) {
             <button
               key={type}
               onClick={() => update({ status: type })}
-              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-                filters.status === type
+              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${filters.status === type
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
+                }`}
             >
               {type}
             </button>
@@ -227,11 +221,10 @@ export function FilterSidebar({ filters, onFilterChange }: FilterSidebarProps) {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => update({ postedBy: "all" })}
-            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-              filters.postedBy === "all"
+            className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${filters.postedBy === "all"
                 ? "bg-primary text-primary-foreground"
                 : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-            }`}
+              }`}
           >
             All
           </button>
@@ -239,11 +232,10 @@ export function FilterSidebar({ filters, onFilterChange }: FilterSidebarProps) {
             <button
               key={type}
               onClick={() => update({ postedBy: type })}
-              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${
-                filters.postedBy === type
+              className={`rounded-lg px-3 py-1.5 text-xs font-medium transition-colors ${filters.postedBy === type
                   ? "bg-primary text-primary-foreground"
                   : "bg-secondary text-secondary-foreground hover:bg-secondary/80"
-              }`}
+                }`}
             >
               {type}
             </button>

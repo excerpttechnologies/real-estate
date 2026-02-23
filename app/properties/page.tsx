@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect, Suspense } from "react"
 import { useSearchParams } from "next/navigation"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -16,26 +16,41 @@ import {
 } from "@/components/ui/select"
 import { properties } from "@/lib/data"
 import { Grid3X3, List, SlidersHorizontal, X } from "lucide-react"
-import { Suspense } from "react"
+
 
 function PropertiesContent() {
   const searchParams = useSearchParams()
   const initialType = searchParams.get("type") || "all"
+  const initialPropertyType = searchParams.get("propertyType") || "all"
   const initialLocation = searchParams.get("location") || ""
+  const initialStatus = searchParams.get("status") || "all"
+  const initialFeatured = searchParams.get("featured") === "true"
 
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid")
   const [sortBy, setSortBy] = useState("newest")
   const [showFilters, setShowFilters] = useState(false)
   const [filters, setFilters] = useState({
     listingType: initialType,
-    propertyType: "all",
+    propertyType: initialPropertyType,
     priceRange: [0, 100] as [number, number],
     bedrooms: "any",
     furnishing: "all",
-    status: "all",
+    status: initialStatus,
     postedBy: "all",
     verified: false,
+    featured: initialFeatured,
   })
+
+  // Sync filters with URL params when they change
+  useEffect(() => {
+    setFilters((prev) => ({
+      ...prev,
+      listingType: searchParams.get("type") || "all",
+      propertyType: searchParams.get("propertyType") || "all",
+      status: searchParams.get("status") || "all",
+      featured: searchParams.get("featured") === "true",
+    }))
+  }, [searchParams])
 
   const filteredProperties = useMemo(() => {
     let result = [...properties]
@@ -100,7 +115,7 @@ function PropertiesContent() {
           <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4">
             <div>
               <h1 className="text-xl font-bold text-foreground md:text-2xl">
-                Properties{" "}
+                {filters.status === "Under Construction" ? "New Projects" : "Properties"}{" "}
                 {initialLocation && (
                   <span className="text-primary">in {initialLocation}</span>
                 )}
@@ -124,22 +139,20 @@ function PropertiesContent() {
               <div className="hidden items-center rounded-lg border border-border md:flex">
                 <button
                   onClick={() => setViewMode("grid")}
-                  className={`flex h-9 w-9 items-center justify-center transition-colors ${
-                    viewMode === "grid"
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-foreground"
-                  } rounded-l-lg`}
+                  className={`flex h-9 w-9 items-center justify-center transition-colors ${viewMode === "grid"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                    } rounded-l-lg`}
                   aria-label="Grid view"
                 >
                   <Grid3X3 className="h-4 w-4" />
                 </button>
                 <button
                   onClick={() => setViewMode("list")}
-                  className={`flex h-9 w-9 items-center justify-center transition-colors ${
-                    viewMode === "list"
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-foreground"
-                  } rounded-r-lg`}
+                  className={`flex h-9 w-9 items-center justify-center transition-colors ${viewMode === "list"
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-foreground"
+                    } rounded-r-lg`}
                   aria-label="List view"
                 >
                   <List className="h-4 w-4" />

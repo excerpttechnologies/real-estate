@@ -57,7 +57,7 @@ export function SiteHeader() {
             Commercial
           </Link>
           <Link
-            href="/properties"
+            href="/properties?status=Under Construction"
             className="rounded-lg px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
           >
             New Projects
@@ -137,6 +137,13 @@ export function SiteHeader() {
               onClick={() => setMobileMenuOpen(false)}
             >
               Commercial
+            </Link>
+            <Link
+              href="/properties?status=Under Construction"
+              className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground"
+              onClick={() => setMobileMenuOpen(false)}
+            >
+              New Projects
             </Link>
             <div className="mt-3 flex flex-col gap-2 border-t border-border pt-3">
               <Button variant="outline" className="w-full gap-1.5" asChild>

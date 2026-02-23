@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="sunset-sky" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e1b4b"/>
+      <stop offset="30%" style="stop-color:#312e81"/>
+      <stop offset="60%" style="stop-color:#7c3aed"/>
+      <stop offset="80%" style="stop-color:#f472b6"/>
+      <stop offset="100%" style="stop-color:#fb923c"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3a5f"/>
+      <stop offset="100%" style="stop-color:#0c4a6e"/>
+    </linearGradient>
+    <linearGradient id="marble" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f8fafc"/>
+      <stop offset="50%" style="stop-color:#e2e8f0"/>
+      <stop offset="100%" style="stop-color:#f1f5f9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Panoramic window view - sunset sky -->
+  <rect width="800" height="600" fill="url(#sunset-sky)"/>
+  
+  <!-- Sea -->
+  <rect x="0" y="280" width="800" height="120" fill="url(#sea)"/>
+  <path d="M0,300 Q50,290 100,300 Q150,310 200,300 Q250,290 300,300 Q350,310 400,300 Q450,290 500,300 Q550,310 600,300 Q650,290 700,300 Q750,310 800,300" fill="none" stroke="#38bdf8" stroke-width="1" opacity="0.4"/>
+  <path d="M0,320 Q60,310 120,320 Q180,330 240,320 Q300,310 360,320 Q420,330 480,320 Q540,310 600,320 Q660,330 720,320 Q780,310 800,315" fill="none" stroke="#38bdf8" stroke-width="0.8" opacity="0.3"/>
+  
+  <!-- Sun reflection on water -->
+  <ellipse cx="400" cy="320" rx="80" ry="15" fill="#fb923c" opacity="0.3"/>
+  
+  <!-- Interior floor (marble) -->
+  <polygon points="0,400 800,400 800,600 0,600" fill="url(#marble)"/>
+  <line x1="0" y1="400" x2="800" y2="400" stroke="#cbd5e1" stroke-width="2"/>
+  
+  <!-- Marble veins -->
+  <path d="M100,420 Q200,450 300,440 Q400,430 500,460" fill="none" stroke="#cbd5e1" stroke-width="0.5" opacity="0.5"/>
+  <path d="M300,480 Q400,500 500,490 Q600,480 700,510" fill="none" stroke="#cbd5e1" stroke-width="0.5" opacity="0.4"/>
+  
+  <!-- Floor-to-ceiling window frame -->
+  <rect x="0" y="0" width="800" height="400" stroke="#374151" stroke-width="8" fill="none"/>
+  <line x1="200" y1="0" x2="200" y2="400" stroke="#374151" stroke-width="4"/>
+  <line x1="400" y1="0" x2="400" y2="400" stroke="#374151" stroke-width="4"/>
+  <line x1="600" y1="0" x2="600" y2="400" stroke="#374151" stroke-width="4"/>
+  
+  <!-- Luxury sofa -->
+  <rect x="100" y="430" width="350" height="70" rx="15" fill="#f5f5f4"/>
+  <rect x="110" y="420" width="330" height="20" rx="8" fill="#e7e5e4"/>
+  <rect x="90" y="420" width="45" height="90" rx="10" fill="#d6d3d1"/>
+  <rect x="415" y="420" width="45" height="90" rx="10" fill="#d6d3d1"/>
+  
+  <!-- Coffee table -->
+  <rect x="200" y="530" width="200" height="10" rx="3" fill="#374151"/>
+  <rect x="210" y="540" width="6" height="30" fill="#374151"/>
+  <rect x="385" y="540" width="6" height="30" fill="#374151"/>
+  
+  <!-- Wine glass on table -->
+  <line x1="290" y1="515" x2="290" y2="530" stroke="#94a3b8" stroke-width="1.5"/>
+  <path d="M280,515 Q290,505 300,515" fill="none" stroke="#94a3b8" stroke-width="1.5"/>
+  <rect x="282" y="528" width="16" height="2" rx="1" fill="#94a3b8"/>
+  
+  <!-- Art piece on wall -->
+  <rect x="540" y="420" width="8" height="160" rx="2" fill="#374151"/>
+  <circle cx="544" cy="420" r="25" fill="#7c3aed" opacity="0.6"/>
+  <circle cx="544" cy="420" r="18" fill="#a78bfa" opacity="0.5"/>
+  
+  <!-- Pendant light -->
+  <line x1="300" y1="0" x2="300" y2="80" stroke="#fbbf24" stroke-width="1"/>
+  <circle cx="300" cy="90" r="15" fill="#fbbf24" opacity="0.8"/>
+  <circle cx="300" cy="90" r="25" fill="#fbbf24" opacity="0.2"/>
+  
+  <!-- Floor lamp -->
+  <rect x="620" y="440" width="6" height="120" fill="#374151"/>
+  <ellipse cx="623" cy="435" rx="20" ry="12" fill="#fbbf24" opacity="0.7"/>
+  <circle cx="623" cy="435" r="25" fill="#fbbf24" opacity="0.15"/>
+  
+  <!-- Terrace visible -->
+  <rect x="650" y="400" width="150" height="200" fill="#94a3b8" opacity="0.2"/>
+  <rect x="650" y="400" width="3" height="200" fill="#374151"/>
+  
+  <!-- Stars in sky -->
+  <circle cx="100" cy="40" r="1.5" fill="white" opacity="0.7"/>
+  <circle cx="300" cy="60" r="1" fill="white" opacity="0.5"/>
+  <circle cx="500" cy="30" r="1.5" fill="white" opacity="0.6"/>
+  <circle cx="700" cy="50" r="1" fill="white" opacity="0.4"/>
+  <circle cx="150" cy="100" r="1" fill="white" opacity="0.5"/>
+  <circle cx="550" cy="80" r="1" fill="white" opacity="0.6"/>
+</svg>
