@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="warm-wall" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fef3c7"/>
+      <stop offset="100%" style="stop-color:#fde68a"/>
+    </linearGradient>
+    <linearGradient id="wood" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a16207"/>
+      <stop offset="100%" style="stop-color:#854d0e"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Wall -->
+  <rect width="800" height="600" fill="url(#warm-wall)"/>
+  
+  <!-- Floor -->
+  <polygon points="0,430 800,430 800,600 0,600" fill="#d4a574"/>
+  <line x1="0" y1="430" x2="800" y2="430" stroke="#92400e" stroke-width="2"/>
+  
+  <!-- Balcony/window with view -->
+  <rect x="400" y="60" width="350" height="350" fill="#7dd3fc"/>
+  <rect x="400" y="60" width="350" height="350" stroke="#94a3b8" stroke-width="4" fill="none"/>
+  
+  <!-- Balcony view - mountains -->
+  <polygon points="400,300 480,200 560,280 620,180 700,250 750,220 750,410 400,410" fill="#22c55e" opacity="0.5"/>
+  <polygon points="400,350 500,250 580,330 650,270 750,320 750,410 400,410" fill="#16a34a" opacity="0.6"/>
+  
+  <!-- Balcony railing -->
+  <rect x="400" y="380" width="350" height="8" fill="#78716c"/>
+  <rect x="430" y="350" width="4" height="38" fill="#78716c"/>
+  <rect x="480" y="350" width="4" height="38" fill="#78716c"/>
+  <rect x="530" y="350" width="4" height="38" fill="#78716c"/>
+  <rect x="580" y="350" width="4" height="38" fill="#78716c"/>
+  <rect x="630" y="350" width="4" height="38" fill="#78716c"/>
+  <rect x="680" y="350" width="4" height="38" fill="#78716c"/>
+  <rect x="720" y="350" width="4" height="38" fill="#78716c"/>
+  
+  <!-- Bed -->
+  <rect x="40" y="300" width="300" height="150" rx="10" fill="white"/>
+  <rect x="40" y="300" width="300" height="150" rx="10" stroke="#d6d3d1" stroke-width="2" fill="none"/>
+  
+  <!-- Headboard -->
+  <rect x="30" y="250" width="320" height="60" rx="8" fill="url(#wood)"/>
+  
+  <!-- Pillows -->
+  <ellipse cx="120" cy="325" rx="55" ry="20" fill="#e2e8f0"/>
+  <ellipse cx="260" cy="325" rx="55" ry="20" fill="#e2e8f0"/>
+  
+  <!-- Blanket fold -->
+  <rect x="40" y="370" width="300" height="30" rx="5" fill="#dbeafe"/>
+  
+  <!-- Bedside table left -->
+  <rect x="0" y="340" width="30" height="90" rx="3" fill="url(#wood)"/>
+  <rect x="-5" y="335" width="40" height="8" rx="2" fill="#92400e"/>
+  
+  <!-- Lamp -->
+  <rect x="10" y="295" width="6" height="40" fill="#d4a574"/>
+  <ellipse cx="13" cy="290" rx="15" ry="10" fill="#fbbf24" opacity="0.8"/>
+  
+  <!-- Art on wall -->
+  <rect x="100" y="80" width="180" height="140" rx="3" fill="white"/>
+  <rect x="110" y="90" width="160" height="120" fill="#fca5a5" opacity="0.4"/>
+  <circle cx="190" cy="130" r="30" fill="#f87171" opacity="0.5"/>
+  <circle cx="170" cy="150" r="25" fill="#fb923c" opacity="0.4"/>
+  <circle cx="210" cy="160" r="20" fill="#fbbf24" opacity="0.4"/>
+  <rect x="100" y="80" width="180" height="140" rx="3" stroke="#d4a574" stroke-width="3" fill="none"/>
+  
+  <!-- Ceiling fan -->
+  <circle cx="300" cy="30" r="8" fill="#78716c"/>
+  <line x1="300" y1="38" x2="300" y2="50" stroke="#78716c" stroke-width="2"/>
+  <ellipse cx="300" cy="55" rx="60" ry="5" fill="#94a3b8" opacity="0.6"/>
+  
+  <!-- Rug -->
+  <ellipse cx="200" cy="500" rx="180" ry="50" fill="#f87171" opacity="0.2"/>
+  <ellipse cx="200" cy="500" rx="150" ry="40" fill="#ef4444" opacity="0.15"/>
+  
+  <!-- Side chair -->
+  <rect x="380" y="440" width="50" height="40" rx="5" fill="#f59e0b"/>
+  <rect x="375" y="430" width="60" height="12" rx="3" fill="#d97706"/>
+  <rect x="385" y="480" width="6" height="20" fill="#78350f"/>
+  <rect x="420" y="480" width="6" height="20" fill="#78350f"/>
+</svg>
