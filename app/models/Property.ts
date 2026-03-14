@@ -100,7 +100,7 @@ const PropertySchema = new Schema<IProperty>(
     },
     featured: {
       type: Boolean,
-      default: false,
+      default: true,
     },
   },
   {
