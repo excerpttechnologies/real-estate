@@ -28,11 +28,11 @@ export function HeroSection() {
 
   return (
     <section className="relative overflow-hidden">
-      {/* Background Image */}
+      
       <div className="absolute inset-0">
         <Image
-          // src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80"
-          src="/images/heroImage.png"
+          src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1920&h=1080&fit=crop&q=80"
+          //src="/images/heroImage.png"
           alt="Modern luxury architecture"
           fill
           className="object-cover"
